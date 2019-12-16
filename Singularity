@@ -7,7 +7,7 @@ A Singularity image for Snippy
 %labels
 Maintainer Kristy Horan
 Build 1.0
-snippy_version 4.3.6
+snippy_version 4.4.5
 
 %environment
 export VERSION=1.0
