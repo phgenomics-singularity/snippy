@@ -15,10 +15,11 @@ def load_template(name):
     return template
 
 @click.command()
-@click.option("--version", default=None)
+@click.option("--snpdists_version", default=None)
+@click.option("--snippy_version", default=None)
 @click.option("--author", default=None)
 @click.option("-c", "--config", default="config.toml")
-def update_singularity(version, author, config):
+def update_singularity(snpdists_version,snippy_version, author, config):
 
     '''
     update the singularity recipe for new version of snippy
@@ -26,8 +27,10 @@ def update_singularity(version, author, config):
 
     config = toml.load('config.toml')
 
-    if version is not None:
-        config['version'] = version
+    if snippy_version is not None:
+        config['snippy_version'] = snippy_version
+    if snpdists_version is not None:
+        config['snpdists_version'] = snpdists_version
     if author is not None:
         config['author'] = author
     

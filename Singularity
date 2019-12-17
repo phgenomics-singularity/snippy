@@ -26,6 +26,7 @@ conda config --add channels r
 conda config --add channels bioconda
 
 conda install -c conda-forge -c bioconda snippy=4.4.5
+conda install -c conda-forge -c bioconda snp-dists=0.6.3
 
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
