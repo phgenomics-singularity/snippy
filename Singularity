@@ -7,7 +7,7 @@ A Singularity image for Snippy
 %labels
 Maintainer Kristy Horan
 Build 1.0
-snippy_version 4.4.5
+snippy_version 1.6.12
 
 %environment
 export VERSION=1.0
@@ -19,15 +19,16 @@ apt-get update
 apt-get -y install locales sudo
 
 export PATH=/opt/conda/bin:$PATH
-
+conda upgrade -c defaults --override-channels conda
 conda config --add channels conda-forge
 conda config --add channels defaults
 conda config --add channels r
 conda config --add channels bioconda
 
 conda install -c conda-forge -c bioconda snippy
+conda install -c bioconda samtools=1.9
+conda install -c bioconda freebayes=1.3.1
 
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
