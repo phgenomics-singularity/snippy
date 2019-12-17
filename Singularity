@@ -25,9 +25,7 @@ conda config --add channels defaults
 conda config --add channels r
 conda config --add channels bioconda
 
-conda install -c conda-forge -c bioconda snippy
-conda install -c bioconda samtools=1.9
-conda install -c bioconda freebayes=1.3.1
+conda install -c conda-forge -c bioconda snippy=4.4.5
 
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
